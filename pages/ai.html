@@ -16,12 +16,12 @@
     <section class="hero">
         <h1>AI Doubt Solver</h1>
         <p>Ask your placement-related question</p>
+<div class="ai-container">
+    <textarea id="question" placeholder="Type your question here..."></textarea>
+    <button onclick="generateAnswer()">Ask AI</button>
+    <div id="response" class="response-box"></div>
+</div>
 
-        <textarea id="question" rows="5" cols="40" placeholder="Type your question here..."></textarea>
-        <br><br>
-        <button onclick="generateAnswer()">Ask AI</button>
-
-        <div id="response" style="margin-top:20px;"></div>
     </section>
 
     <script src="../js/script.js"></script>
