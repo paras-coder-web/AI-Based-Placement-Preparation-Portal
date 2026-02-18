@@ -5,6 +5,10 @@ function generateAnswer() {
     if (question.trim() === "") {
         responseBox.innerHTML = "Please enter a question.";
     } else {
-        responseBox.innerHTML = "AI is thinking... (Dummy response for now)";
+        responseBox.innerHTML = "AI is thinking...";
+
+        setTimeout(function() {
+            responseBox.innerHTML = "This is a dummy AI response for now.";
+        }, 1500);
     }
 }
