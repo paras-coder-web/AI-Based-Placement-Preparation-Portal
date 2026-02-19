@@ -147,3 +147,30 @@ textarea {
 nav a.active {
     color: var(--accent-color);
 }
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .feature-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    textarea,
+    .response-box {
+        width: 90%;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+}
