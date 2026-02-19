@@ -43,24 +43,6 @@ nav a {
 nav a:hover {
     color: var(--accent-color);
 }
-nav a {
-    position: relative;
-}
-
-nav a::after {
-    content: "";
-    position: absolute;
-    width: 0%;
-    height: 2px;
-    left: 0;
-    bottom: -4px;
-    background-color: var(--accent-color);
-    transition: 0.3s;
-}
-
-nav a:hover::after {
-    width: 100%;
-}
 
 
 .hero {
@@ -130,8 +112,8 @@ button:hover {
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
 }
 
 
