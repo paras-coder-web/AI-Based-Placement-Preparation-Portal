@@ -43,6 +43,24 @@ nav a {
 nav a:hover {
     color: var(--accent-color);
 }
+nav a {
+    position: relative;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -4px;
+    background-color: var(--accent-color);
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
 
 
 .hero {
@@ -75,13 +93,14 @@ button {
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
 button:hover {
     background-color: #43a047;
-    transform: translateY(-2px);
+    transform: scale(1.05);
 }
+
 
 /* Features Section */
 .features {
@@ -173,4 +192,21 @@ nav a.active {
     .hero h1 {
         font-size: 28px;
     }
+}
+/* Fade In Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero,
+.features,
+.card {
+    animation: fadeIn 0.8s ease-in-out;
 }
