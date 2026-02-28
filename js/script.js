@@ -23,10 +23,12 @@ function filterCards() {
         let text = card.innerText.toLowerCase();
 
         if (text.includes(input)) {
-            card.style.display = "block";
+            card.classList.remove("hidden");
+            card.classList.add("visible");
             visibleCount++;
         } else {
-            card.style.display = "none";
+            card.classList.remove("visible");
+            card.classList.add("hidden");
         }
     });
 
