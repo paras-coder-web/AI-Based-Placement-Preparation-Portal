@@ -15,14 +15,24 @@ function generateAnswer() {
 function filterCards() {
     let input = document.getElementById("searchInput").value.toLowerCase();
     let cards = document.querySelectorAll(".card-link");
+    let noResults = document.getElementById("noResults");
+
+    let visibleCount = 0;
 
     cards.forEach(function(card) {
         let text = card.innerText.toLowerCase();
 
         if (text.includes(input)) {
             card.style.display = "block";
+            visibleCount++;
         } else {
             card.style.display = "none";
         }
     });
+
+    if (visibleCount === 0) {
+        noResults.style.display = "block";
+    } else {
+        noResults.style.display = "none";
+    }
 }
