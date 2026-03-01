@@ -55,3 +55,19 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
 });
+function markComplete(id) {
+    localStorage.setItem(id, "completed");
+    updateCompletionUI();
+}
+
+function updateCompletionUI() {
+    document.querySelectorAll(".card").forEach(card => {
+        let cardId = card.id;
+
+        if (localStorage.getItem(cardId) === "completed") {
+            card.classList.add("completed");
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", updateCompletionUI);

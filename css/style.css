@@ -255,3 +255,8 @@ nav a.active {
     color: var(--text-color);
     font-weight: 500;
 }
+/* Completed Topic Style */
+.completed {
+    border: 2px solid var(--accent-color);
+    background-color: rgba(76, 175, 80, 0.1);
+}
