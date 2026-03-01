@@ -239,3 +239,19 @@ nav a.active {
     opacity: 1;
     transform: scale(1);
 }
+/* Breadcrumb Styling */
+.breadcrumb {
+    padding: 15px 50px;
+    font-size: 14px;
+    background-color: var(--background-color);
+}
+
+.breadcrumb a {
+    text-decoration: none;
+    color: var(--accent-color);
+}
+
+.breadcrumb span {
+    color: var(--text-color);
+    font-weight: 500;
+}
