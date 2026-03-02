@@ -68,6 +68,28 @@ function updateCompletionUI() {
             card.classList.add("completed");
         }
     });
-}
 
+    updateProgress();
+}
+function updateProgress() {
+    let cards = document.querySelectorAll(".card");
+    let total = cards.length;
+    let completed = 0;
+
+    cards.forEach(card => {
+        if (card.classList.contains("completed")) {
+            completed++;
+        }
+    });
+
+    let percent = (completed / total) * 100;
+
+    let progressText = document.getElementById("progressText");
+    let progressFill = document.getElementById("progressFill");
+
+    if (progressText && progressFill) {
+        progressText.innerText = `Progress: ${completed} / ${total} Topics Completed`;
+        progressFill.style.width = percent + "%";
+    }
+}
 document.addEventListener("DOMContentLoaded", updateCompletionUI);
