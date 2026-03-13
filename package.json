@@ -1,0 +1,25 @@
+{
+  "name": "ai-based-placement-preparation-portal",
+  "version": "1.0.0",
+  "description": "A web-based platform designed to help students prepare for campus placements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paras-coder-web/AI-Based-Placement-Preparation-Portal.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/paras-coder-web/AI-Based-Placement-Preparation-Portal/issues"
+  },
+  "homepage": "https://github.com/paras-coder-web/AI-Based-Placement-Preparation-Portal#readme",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  }
+}

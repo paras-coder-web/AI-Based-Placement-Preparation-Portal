@@ -93,3 +93,29 @@ function updateProgress() {
     }
 }
 document.addEventListener("DOMContentLoaded", updateCompletionUI);
+async function askAI() {
+    const question = document.getElementById("questionInput").value;
+
+    if (!question) {
+        document.getElementById("response").innerText = "Please enter a question.";
+        return;
+    }
+
+    try {
+        const res = await fetch("http://localhost:5000/ask", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ question: question })
+        });
+
+        const data = await res.json();
+
+        document.getElementById("response").innerText = data.answer;
+
+    } catch (error) {
+        document.getElementById("response").innerText = "Error connecting to AI server.";
+        console.error(error);
+    }
+}

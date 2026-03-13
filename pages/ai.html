@@ -3,6 +3,7 @@
 <head>
     <title>AI Assistant</title>
     <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
 </head>
 <body>
 
@@ -24,8 +25,8 @@
         <h1>AI Doubt Solver</h1>
         <p>Ask your placement-related question</p>
 <div class="ai-container">
-    <textarea id="question" placeholder="Type your question here..."></textarea>
-    <button onclick="generateAnswer()">Ask AI</button>
+   <textarea id="questionInput"></textarea>
+    <button onclick="askAI()">Ask AI</button>
     <div id="response" class="response-box"></div>
 </div>
 
